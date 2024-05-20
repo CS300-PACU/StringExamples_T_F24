@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-# define LETTERS_SIZE 3
+#define LETTERS_SIZE 3
 
  /****************************************************************************
   Function: 	 	functionWithUnitializedCharArray
