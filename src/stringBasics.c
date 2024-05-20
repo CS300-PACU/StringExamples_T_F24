@@ -12,7 +12,15 @@
 
 # define LETTERS_SIZE 3
 
+ /****************************************************************************
+  Function: 	 	functionWithUnitializedCharArray
 
+  Description: 	This function contains an unitialized char array
+
+  Parameters:		update - a value to be used in the function
+
+  Returned:	 		int - after a small calculation
+  ****************************************************************************/
 int functionWithUnitializedCharArray (int update)
 {
 	const int SIZE = 10;
@@ -23,6 +31,16 @@ int functionWithUnitializedCharArray (int update)
 	return value;
 }
 
+ /****************************************************************************
+  Function: 	 	functionWithLotsOfLocalVars
+
+  Description: 	This function creates and updates a large amount of local
+								variables - data on the stack
+
+  Parameters:		update - a value to be used in the function
+
+  Returned:	 		int - after a small calculation
+  ****************************************************************************/
 int functionWithLotsOfLocalVars(int update)
 {
 	const int SIZE = 100;
@@ -59,6 +77,10 @@ int main (int argc, char* argv[]) {
 	const int SIZE = 10;
 	const int ARRAY_SIZE = 4;
 	char szLetters[ARRAY_SIZE];
+
+	// you can't use a const int to size an array
+	// if you initialize that array at declaration
+	// use a #define
 	char letters[LETTERS_SIZE] = {'A', 'B', 'C'};
 	char szName[SIZE];
 	char szUnitialized[SIZE];
