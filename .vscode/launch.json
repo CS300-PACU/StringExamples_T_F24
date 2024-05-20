@@ -4,6 +4,30 @@
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
+		{
+      "name": "(lldb) stringBasics", // Change name
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/stringBasics", // THIS IS IMPORTANT
+      "args": [], // add comma separated list of args here.
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "runMake", // THIS IS IMPORTANT
+      // "initCommands": [ // add commands to send to the debugger (LLDB)
+      //   "settings set target.process.follow-fork-mode child"
+      // ],
+    },
+		{
+      "name": "(lldb) practiceStringBasics", // Change name
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/practiceStringBasics", // THIS IS IMPORTANT
+      "args": [], // add comma separated list of args here.
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "runMake", // THIS IS IMPORTANT
+      // "initCommands": [ // add commands to send to the debugger (LLDB)
+      //   "settings set target.process.follow-fork-mode child"
+      // ],
+    },
     {
       "name": "(lldb) Launch", // Change name
       "type": "lldb",

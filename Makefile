@@ -27,7 +27,7 @@ ENSCRIPT_FLAGS=-C -T 2 -p - -M Letter -Ec --color -fCourier8
 # the list continues on the next line.  WARNING: There must be no characters
 # other than the newline after the \.  A blank space after the \ gives errors. 
 
-TARGETS=bin/main
+TARGETS=bin/stringBasics bin/practiceStringBasics
 
 all: bin ${TARGETS}
 
@@ -54,10 +54,10 @@ clean:
 	rm -rf bin/*.o ${TARGETS} bin/*.pdf
 
 printAll:
-	enscript ${ENSCRIPT_FLAGS} src/main.c  | ps2pdf - bin/main.pdf
+	enscript ${ENSCRIPT_FLAGS} src/*.c  | ps2pdf - bin/sourceCode.pdf
 
-valgrind: bin/main
-	valgrind ${VALGRIND_FLAGS} bin/main
+valgrind: bin/practiceStringBasics
+	valgrind ${VALGRIND_FLAGS} bin/practiceStringBasics
 
 # https://www.gnu.org/software/make/manual/html_node/Chained-Rules.html
 # https://www.gnu.org/software/make/manual/html_node/Special-Targets.html
