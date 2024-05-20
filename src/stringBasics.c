@@ -25,6 +25,14 @@ int functionWithUnitializedCharArray (int update)
 {
 	const int SIZE = 10;
 	char szUnitializedLocalArray[SIZE];
+
+	/* 
+		use the following code in the Watch window to see the entire
+	 	szUnitializedLocalArray
+
+		/nat *(char(*)[10])szUnitializedLocalArray
+	*/
+
 	int value;
 
 	value += update;
