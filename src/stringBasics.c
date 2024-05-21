@@ -97,6 +97,13 @@ int main (int argc, char* argv[]) {
 
 	strncpy(szLetters, "ABC", ARRAY_SIZE);
 
+	/* 
+		use the following code in the Watch window to see the entire
+	 	szUnitializedLocalArray
+
+		/nat *(char(*)[4])szLetters
+	*/
+
 	printf("szLetter, a null terminated character array:\n");
 	printf("%c", szLetters[1]);
 	printf("\n\n");
