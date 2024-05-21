@@ -45,7 +45,7 @@ int main (int argc, char* argv[]) {
 	}
 
 	// Capitalize every 'a' in the string
-	for (index = 0; index <= strlen(szData); ++index) 
+	for (index = 0; index < strlen(szData); ++index) 
 	{
 		if ('a' == szData[index])
 		{
