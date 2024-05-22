@@ -54,7 +54,7 @@ int main (int argc, char* argv[]) {
 	else if (strcmp(szStr1, "Aloha") == 0) { 
 		printf("szStr1 is Aloha!");
 	} 
-	else if (strcmp(szStr1, szStr2) != 0) { // test for not equal
+	if (strcmp(szStr1, szStr2) != 0) { // test for not equal
 		printf("szStr1 is NOT Hello");
 	}
 	printf("\n\n");
@@ -77,7 +77,7 @@ int main (int argc, char* argv[]) {
 
 
 	// compiler gives a clever warning for the following line.
-	// pay close attention to the warnings!
+	// pay close attention to your compiler warnings!
 	// strncpy(src, "CS", SHORT_SIZE);
 
 	strncpy(src, "CS", SHORT_SIZE/2);
@@ -113,6 +113,11 @@ int main (int argc, char* argv[]) {
 	int intValue, number;
 	char szStr[LARGE_SIZE];
 	char szData[LARGE_SIZE];
+	char extraNewline;
+
+	// scanf() left a \n in the keyboard buffer
+	// clear it out before we call fgets()
+	extraNewline = fgetc(stdin); 
 
 	printf("Please enter an int, a string, and an int: ");
 	fgets(szStr, LARGE_SIZE, stdin);
