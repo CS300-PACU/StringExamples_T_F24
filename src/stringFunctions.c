@@ -72,25 +72,25 @@ int main (int argc, char* argv[]) {
 
 	//////////////////// strncat()
 	const int SHORT_SIZE = 6;
-	char dest[SHORT_SIZE];
-	char src[SHORT_SIZE/2];
+	char szDest[SHORT_SIZE];
+	char szSrc[SHORT_SIZE/2];
 
 
 	// compiler gives a clever warning for the following line.
 	// pay close attention to your compiler warnings!
 	// strncpy(src, "CS", SHORT_SIZE);
 
-	strncpy(src, "CS", SHORT_SIZE/2);
+	strncpy(szSrc, "CS", SHORT_SIZE/2);
 
 	// make sure dest is initialized to '\0'
-	memset(dest, '\0', SHORT_SIZE);
+	memset(szDest, '\0', SHORT_SIZE);
 
-	strncat(dest, src, SHORT_SIZE - 1);
+	strncat(szDest, szSrc, SHORT_SIZE - 1);
 
-	printf("strncat(dest, src, SHORT_SIZE - 1): >%s<\n", dest);
+	printf("strncat(szDest, szSrc, SHORT_SIZE - 1): >%s<\n", szDest);
 
-	strncat(dest, "PU", SHORT_SIZE - strlen(dest) - 1);
-	printf("strncat(dest, \"PU\", SHORT_SIZE - strlen(dest) - 1): >%s<\n", dest);
+	strncat(szDest, "PU", SHORT_SIZE - strlen(szDest) - 1);
+	printf("strncat(szDest, \"PU\", SHORT_SIZE - strlen(szDest) - 1): >%s<\n", szDest);
 	printf("\n\n");
 
 
