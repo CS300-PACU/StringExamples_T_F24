@@ -28,7 +28,8 @@ ENSCRIPT_FLAGS=-C -T 2 -p - -M Letter -Ec --color -fCourier8
 # other than the newline after the \.  A blank space after the \ gives errors. 
 
 TARGETS=bin/stringBasics bin/practiceStringBasics bin/stringSolution1 \
-bin/stringFunctions bin/stringSolution2 bin/fileSolution1
+bin/fileReading \
+bin/stringFunctions bin/stringSolution2 bin/fileSolution1 bin/fileSolution2
 
 all: bin ${TARGETS}
 
