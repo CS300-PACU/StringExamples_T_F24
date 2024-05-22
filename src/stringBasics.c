@@ -1,5 +1,5 @@
 /****************************************************************************
- File name:  	practiceStringBasics.c
+ File name:  	stringBasics.c
  Author:
  Date:
  Class:				CS 300
