@@ -27,7 +27,12 @@ int main (int argc, char* argv[]) {
 	// Declare a character array of size 15
 	const int SIZE = 15;
 	char szData[SIZE];
-	int index;
+
+	// Copy the string “HELLO CS!” into the array
+	strncpy(szData, "HELLO CS!", SIZE);
+	
+	// Print that string on the screen
+	printf("%s\n", szData);
 
 	// Ask the user to input a string from the keyboard
 	printf("Input a string: ");
@@ -38,24 +43,8 @@ int main (int argc, char* argv[]) {
 	// Print that string on the screen with its length
 	printf("%s len: %ld\n", szData, strlen(szData));
 
-	// Print that string on the screen backwards
-	for (index = strlen(szData)-1; index >=0 ; --index) 
-	{
-		printf("%c", szData[index]);
-	}
-
-	// Capitalize every 'a' in the string
-	for (index = 0; index < strlen(szData); ++index) 
-	{
-		if ('a' == szData[index])
-		{
-			szData[index] = 'A';
-		}
-	}
-	printf("\n");
-	
-	// Print the edited string to the screen
-	printf("%s\n\n", szData);
+	// Print the last character before the \0 on the screen
+	printf("Last character %c\n\n", szData[strlen(szData) - 1]);
 
 	return EXIT_SUCCESS;
 }
