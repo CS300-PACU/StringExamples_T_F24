@@ -132,6 +132,12 @@ int main (int argc, char* argv[]) {
 	fgets(szName, SIZE, stdin);
 	printf(">%s<\n", szName);
 
+	// replace the \n read by fgets by a \0
+	printf("replace the \\n read by fgets by a \\0\n");
+	if ('\n' == szName[strlen(szName) - 1]) {
+		szName[strlen(szName) - 1 ] = '\0';
+	}
+	printf("szName: >%s<\n", szName);
 
 	printf("Printing an unitialized string: ");
 	printf(">%s<\n", szUnitialized);
