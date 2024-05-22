@@ -24,12 +24,8 @@
 int main (int argc, char* argv[]) {
 
 	const int SIZE = 10;
-	const int ARRAY_SIZE = 4;
-	char szLetters[ARRAY_SIZE];
-
-	const int SIZE = 10;
 	char szName[SIZE];
-	int index;
+	int index = 11;
 
 	// fill a character array
 	memset(szName, 'a', SIZE);
@@ -42,11 +38,13 @@ int main (int argc, char* argv[]) {
 	for (index = 0; '\0' != szName[index] && index < SIZE; ++index) {
 		printf("%c", szName[index]);
 	}
+	printf("\n\n");
 
-	////////////
+	//////////// strcmp()
 
 	char szStr1[SIZE], szStr2[SIZE];
 
+	printf("Please enter a string (try Hola or Aloha or Hello): ");
 	scanf("%s", szStr1);
 	strncpy(szStr2, "Hello", SIZE);
 
@@ -59,15 +57,69 @@ int main (int argc, char* argv[]) {
 	else if (strcmp(szStr1, szStr2) != 0) { // test for not equal
 		printf("szStr1 is NOT Hello");
 	}
+	printf("\n\n");
 
-	///////////////////
 
+	/////////////////// strncpy()
 	strncpy(szName, "CS300", SIZE);
 	printf(" strncpy(szName, \"CS300\", SIZE): >%s<\n", szName);
 
-	strncpy(szName, "CS300", 2);
+	memset(szName, 'a', SIZE); // fill szName with a, no \0
+	strncpy(szName, "CS300", 2); // compiler gives a clever warning!
 	printf(" strncpy(szName, \"CS300\", 2): >%s<\n", szName);
+	printf("\n\n");
 
+
+	//////////////////// strncat()
+	const int SHORT_SIZE = 6;
+	char dest[SHORT_SIZE];
+	char src[SHORT_SIZE/2];
+
+
+	// compiler gives a clever warning for the following line.
+	// pay close attention to the warnings!
+	// strncpy(src, "CS", SHORT_SIZE);
+
+	strncpy(src, "CS", SHORT_SIZE/2);
+
+	// make sure dest is initialized to '\0'
+	memset(dest, '\0', SHORT_SIZE);
+
+	strncat(dest, src, SHORT_SIZE - 1);
+
+	printf("strncat(dest, src, SHORT_SIZE - 1): >%s<\n", dest);
+
+	strncat(dest, "PU", SHORT_SIZE - strlen(dest) - 1);
+	printf("strncat(dest, \"PU\", SHORT_SIZE - strlen(dest) - 1): >%s<\n", dest);
+	printf("\n\n");
+
+
+	//////////////////// snprintf()
+	const int LARGE_SIZE = 100;
+	char szDestination[LARGE_SIZE];
+
+	snprintf(szDestination, LARGE_SIZE, "%d", 100);
+
+	printf("snprintf(szDestination, LARGE_SIZE, \"%%dn\", 100): >%s<\n", 
+		szDestination);
+
+	snprintf(szDestination, LARGE_SIZE, "int: %d double: %f", 100, 3.14159);
+
+	printf("snprintf(szDestination, LARGE_SIZE, \"int: %%d double: %%f\", 100, 3.14159) >%s<\n", szDestination);
+	printf("\n\n");
+
+
+	//////////////////// sscanf()
+	int intValue, number;
+	char szStr[LARGE_SIZE];
+	char szData[LARGE_SIZE];
+
+	printf("Please enter an int, a string, and an int: ");
+	fgets(szStr, LARGE_SIZE, stdin);
+	printf("The user's string: >%s<\n", szStr);
+
+	sscanf(szStr, "%d %s %d", &intValue, szData, &number);
+	printf("sscanf() -> int: %d string: %s int: %d\n", intValue, szData, number);
 
 	return EXIT_SUCCESS;
 }
