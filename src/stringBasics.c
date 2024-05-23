@@ -26,7 +26,7 @@ int functionWithUnitializedCharArray (int update)
 	const int SIZE = 10;
 	char szUnitializedLocalArray[SIZE];
 
-	int value;
+	int value = 0;
 
 	value += update;
 	return value;
@@ -47,7 +47,7 @@ int functionWithLotsOfLocalVars(int update)
 	const int SIZE = 100;
 	int intArray[SIZE];
 	char szUnitializedLocalArray[SIZE];
-	int value;
+	int value = 1;
 	double doubleNumber;
 	int secondIntArray[SIZE];
 
@@ -59,6 +59,39 @@ int functionWithLotsOfLocalVars(int update)
 	doubleNumber = 100.8 * value;
 	value -= doubleNumber;
 	return value;
+}
+
+
+/****************************************************************************
+  Function: 	 	receiveStringArray
+
+  Description: 	This function receives a NULL terminated string as a parameter
+
+  Parameters:		szName - the NULL terminated character array
+								LENGTH - the size of the character array
+
+  Returned:	 		NONE
+  ****************************************************************************/
+void receiveStringArray(char szName[], const int LENGTH) {
+	printf("%s\n", szName);
+
+	printf("%c -> %c\n", szName[0], szName[strlen(szName)-1]);
+}
+
+/****************************************************************************
+  Function: 	 	receiveStringPtr
+
+  Description: 	This function receives a NULL terminated string as a parameter
+
+  Parameters:		pszName - a pointer to the NULL terminated character array
+								LENGTH - the size of the character array
+
+  Returned:	 		NONE
+  ****************************************************************************/
+void receiveStringPtr(char *pszName, const int LENGTH) {
+	printf("%s\n", pszName);
+
+	printf("%c -> %c\n", pszName[0], pszName[strlen(pszName)-1]);
 }
 
 
@@ -132,5 +165,9 @@ int main (int argc, char* argv[]) {
 	functionWithLotsOfLocalVars(11);
 	functionWithUnitializedCharArray(4);
 
+	/////////////////
+	receiveStringArray(szName, SIZE);
+	receiveStringPtr(szName, SIZE);
+	
 	return EXIT_SUCCESS;
 }
