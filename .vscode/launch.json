@@ -17,6 +17,30 @@
       // ],
     },
 		{
+      "name": "(lldb) stringFunctions", // Change name
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/stringFunctions", // THIS IS IMPORTANT
+      "args": [], // add comma separated list of args here.
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "runMake", // THIS IS IMPORTANT
+      // "initCommands": [ // add commands to send to the debugger (LLDB)
+      //   "settings set target.process.follow-fork-mode child"
+      // ],
+    },
+		{
+      "name": "(lldb) stringPointers", // Change name
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/stringPointers", // THIS IS IMPORTANT
+      "args": [], // add comma separated list of args here.
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "runMake", // THIS IS IMPORTANT
+      // "initCommands": [ // add commands to send to the debugger (LLDB)
+      //   "settings set target.process.follow-fork-mode child"
+      // ],
+    },
+		{
       "name": "(lldb) practiceStringBasics", // Change name
       "type": "lldb",
       "request": "launch",
@@ -40,11 +64,11 @@
       //   "settings set target.process.follow-fork-mode child"
       // ],
     },
-    {
-      "name": "(lldb) Launch", // Change name
+		{
+      "name": "(lldb) stringSolution2", // Change name
       "type": "lldb",
       "request": "launch",
-      "program": "${workspaceFolder}/bin/main", // THIS IS IMPORTANT
+      "program": "${workspaceFolder}/bin/stringSolution2", // THIS IS IMPORTANT
       "args": [], // add comma separated list of args here.
       "cwd": "${workspaceFolder}",
       "preLaunchTask": "runMake", // THIS IS IMPORTANT
@@ -52,15 +76,67 @@
       //   "settings set target.process.follow-fork-mode child"
       // ],
     },
-    {
-      "name": "(lldb) Launch with args", // Change name
+		{
+      "name": "(lldb) fileReading", // Change name
       "type": "lldb",
       "request": "launch",
-      "program": "${workspaceFolder}/bin/main", // THIS IS IMPORTANT
-      "args": ["64.59.225.81", "/chadd/cs360f21/LabHttp.html"], // add comma separated list of args here.
+      "program": "${workspaceFolder}/bin/fileReading", // THIS IS IMPORTANT
+      "args": [], // add comma separated list of args here.
       "cwd": "${workspaceFolder}",
       "preLaunchTask": "runMake", // THIS IS IMPORTANT
+      // "initCommands": [ // add commands to send to the debugger (LLDB)
+      //   "settings set target.process.follow-fork-mode child"
+      // ],
     },
+		{
+      "name": "(lldb) fileSolution1", // Change name
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/fileSolution1", // THIS IS IMPORTANT
+      "args": [], // add comma separated list of args here.
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "runMake", // THIS IS IMPORTANT
+      // "initCommands": [ // add commands to send to the debugger (LLDB)
+      //   "settings set target.process.follow-fork-mode child"
+      // ],
+    },
+		{
+      "name": "(lldb) fileSolution2", // Change name
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/fileSolution2", // THIS IS IMPORTANT
+      "args": [], // add comma separated list of args here.
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "runMake", // THIS IS IMPORTANT
+      // "initCommands": [ // add commands to send to the debugger (LLDB)
+      //   "settings set target.process.follow-fork-mode child"
+      // ],
+    },
+		{
+      "name": "(lldb) practiceFileReading", // Change name
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/practiceFileReading", // THIS IS IMPORTANT
+      "args": [], // add comma separated list of args here.
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "runMake", // THIS IS IMPORTANT
+      // "initCommands": [ // add commands to send to the debugger (LLDB)
+      //   "settings set target.process.follow-fork-mode child"
+      // ],
+    },
+		{
+      "name": "(lldb) stringPointersSolution", // Change name
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/stringPointersSolution", // THIS IS IMPORTANT
+      "args": [], // add comma separated list of args here.
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "runMake", // THIS IS IMPORTANT
+      // "initCommands": [ // add commands to send to the debugger (LLDB)
+      //   "settings set target.process.follow-fork-mode child"
+      // ],
+    },
+
 /*    {
       "name": "(gdb) Launch with args", // Change name
       "type": "cppdbg",
