@@ -26,13 +26,6 @@ int functionWithUnitializedCharArray (int update)
 	const int SIZE = 10;
 	char szUnitializedLocalArray[SIZE];
 
-	/* 
-		use the following code in the Watch window to see the entire
-	 	szUnitializedLocalArray
-
-		/nat *(char(*)[10])szUnitializedLocalArray
-	*/
-
 	int value;
 
 	value += update;
@@ -96,13 +89,6 @@ int main (int argc, char* argv[]) {
 	// szLetters = "ABC";
 
 	strncpy(szLetters, "ABC", ARRAY_SIZE);
-
-	/* 
-		use the following code in the Watch window to see the entire
-	 	szUnitializedLocalArray
-
-		/nat *(char(*)[4])szLetters
-	*/
 
 	printf("szLetter, a null terminated character array:\n");
 	printf("%c", szLetters[1]);
