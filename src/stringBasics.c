@@ -94,8 +94,6 @@ void receiveStringPtr(char *pszName, const int LENGTH) {
 	printf("%c -> %c\n", pszName[0], pszName[strlen(pszName)-1]);
 }
 
-
-
  /****************************************************************************
   Function: 	 main
 
@@ -168,6 +166,6 @@ int main (int argc, char* argv[]) {
 	/////////////////
 	receiveStringArray(szName, SIZE);
 	receiveStringPtr(szName, SIZE);
-	
+
 	return EXIT_SUCCESS;
 }
