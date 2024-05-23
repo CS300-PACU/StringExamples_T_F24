@@ -31,6 +31,12 @@ int main (int argc, char* argv[]) {
 
 	printf("%s\n", pszName);
 
+	/*
+		Use this in the Watch Panel in the debugger to see the entire array.
+
+		/nat *(char(*)[10])pszName
+	*/
+
 	for (index = 0; index < length && '\0' != pszName[index]; ++ index) {
 		printf("%c", pszName[index]);
 	}
