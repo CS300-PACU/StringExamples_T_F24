@@ -126,6 +126,12 @@ int main (int argc, char* argv[]) {
 	printf("\n\n");
   printf("%s", szLetters);
 
+	////
+	functionWithUnitializedCharArray(2);
+	functionWithLotsOfLocalVars(11);
+	functionWithUnitializedCharArray(4);
+	////
+	
 	printf("\n\n");
 	printf("letters, a character array:\n");
 	printf("%c", letters[1]);
@@ -158,10 +164,6 @@ int main (int argc, char* argv[]) {
 
 	printf("Printing an unitialized string: ");
 	printf(">%s<\n", szUnitialized);
-
-	functionWithUnitializedCharArray(2);
-	functionWithLotsOfLocalVars(11);
-	functionWithUnitializedCharArray(4);
 
 	/////////////////
 	receiveStringArray(szName, SIZE);
